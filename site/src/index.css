@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-cream font-body antialiased m-0;
+}
+
+::selection {
+  @apply bg-rust text-cream;
+}
+
+.grain-overlay {
+  @apply pointer-events-none fixed inset-0 z-50 bg-grain;
+}
