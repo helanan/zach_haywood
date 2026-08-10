@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { links } from '../links'
 import threshersPoster from '../assets/tour/threshers-album-release.jpg'
 import countryFestPoster from '../assets/tour/st-pete-country-fest.jpg'
@@ -20,6 +21,17 @@ const shows = [
 ]
 
 export default function Connect() {
+  const [openPoster, setOpenPoster] = useState(null)
+
+  useEffect(() => {
+    if (!openPoster) return
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setOpenPoster(null)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [openPoster])
+
   return (
     <section id="connect" className="relative bg-surface py-28">
       <div className="mx-auto max-w-6xl px-6">
@@ -37,11 +49,18 @@ export default function Connect() {
                   key={show.title}
                   className="flex gap-5 rounded-md border border-cream/20 p-5"
                 >
-                  <img
-                    src={show.poster}
-                    alt={show.title}
-                    className="h-32 w-24 flex-none rounded object-cover object-top"
-                  />
+                  <button
+                    type="button"
+                    onClick={() => setOpenPoster(show)}
+                    className="flex-none cursor-zoom-in"
+                    aria-label={`View larger poster for ${show.title}`}
+                  >
+                    <img
+                      src={show.poster}
+                      alt={show.title}
+                      className="h-32 w-24 rounded object-cover object-top transition hover:opacity-80"
+                    />
+                  </button>
                   <div>
                     <p className="font-cond text-lg uppercase tracking-widest text-whiskey">
                       {show.date}
@@ -87,6 +106,31 @@ export default function Connect() {
           </div>
         </div>
       </div>
+
+      {openPoster && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={openPoster.title}
+          onClick={() => setOpenPoster(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-6"
+        >
+          <button
+            type="button"
+            onClick={() => setOpenPoster(null)}
+            aria-label="Close"
+            className="absolute right-6 top-6 font-cond text-3xl text-cream/80 hover:text-whiskey"
+          >
+            ✕
+          </button>
+          <img
+            src={openPoster.poster}
+            alt={openPoster.title}
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[85vh] max-w-full rounded-md object-contain shadow-2xl"
+          />
+        </div>
+      )}
     </section>
   )
 }
