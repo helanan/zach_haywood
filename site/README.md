@@ -1,4 +1,4 @@
-# Zach Haywood — Outlaw Country
+# Zach Haywood — Country Music
 
 Modern one-page artist site: hero, about, discography, tour/merch placeholders, and social links.
 
