@@ -1,4 +1,23 @@
 import { links } from '../links'
+import threshersPoster from '../assets/tour/threshers-album-release.jpg'
+import countryFestPoster from '../assets/tour/st-pete-country-fest.jpg'
+
+const shows = [
+  {
+    date: 'Fri, Sept 4',
+    title: 'Album Release Party — Post-Game Concert',
+    venue: 'BayCare Ballpark, Clearwater, FL',
+    details: 'Threshers vs. Fort Myers Mussels — Gates open 5:30pm, First pitch 6:30pm',
+    poster: threshersPoster,
+  },
+  {
+    date: 'Sun, Nov 22',
+    title: 'St. Pete Country Fest 2026',
+    venue: 'Vinoy Park, St. Petersburg, FL',
+    details: 'Nov 20–22 — headlined by Bailey Zimmerman, Riley Green & Koe Wetzel',
+    poster: countryFestPoster,
+  },
+]
 
 export default function Connect() {
   return (
@@ -12,13 +31,27 @@ export default function Connect() {
             <h2 className="mt-2 font-display text-4xl text-cream sm:text-5xl">
               Tour Dates
             </h2>
-            <div className="mt-8 rounded-md border border-dashed border-cream/20 p-8 text-center">
-              <p className="font-cond text-xl uppercase tracking-wide text-cream/70">
-                No shows on the books right now
-              </p>
-              <p className="mt-2 font-body text-muted">
-                Follow on Instagram or Facebook — new dates get posted there first.
-              </p>
+            <div className="mt-8 space-y-6">
+              {shows.map((show) => (
+                <div
+                  key={show.title}
+                  className="flex gap-5 rounded-md border border-cream/20 p-5"
+                >
+                  <img
+                    src={show.poster}
+                    alt={show.title}
+                    className="h-32 w-24 flex-none rounded object-cover object-top"
+                  />
+                  <div>
+                    <p className="font-cond text-lg uppercase tracking-widest text-whiskey">
+                      {show.date}
+                    </p>
+                    <p className="mt-1 font-display text-2xl text-cream">{show.title}</p>
+                    <p className="mt-1 font-body text-cream/80">{show.venue}</p>
+                    <p className="mt-1 font-body text-sm text-muted">{show.details}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
