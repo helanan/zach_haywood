@@ -14,7 +14,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-20 pt-40">
         <p className="mb-3 font-cond text-lg uppercase tracking-[0.35em] text-whiskey">
-          Outlaw Country
+          Country Music
         </p>
         <h1 className="font-display text-6xl leading-[0.9] text-cream sm:text-8xl md:text-[9rem]">
           ZACH
