@@ -15,22 +15,23 @@ export default function About() {
             Zach
           </h2>
           <p className="mt-6 max-w-2xl font-body text-lg leading-relaxed text-cream/80">
-            Once an up-and-coming baseball player from Athens, Georgia, Zach Haywood
-            discovered his true calling in music after a simple YouTube video sparked his
-            passion. With raw determination and a guitar in hand, he turned that spark into
-            a fire, leading to what is now an unstoppable journey across the country. Known
-            for his powerful country vocals and gritty sound, Zach blends heartfelt
-            lyrics—often starting as poems—with the energy of a full band performance.
+            Zach Haywood is a Florida-based singer-songwriter blending raw storytelling,
+            Southern roots, and the brass-soaked spirit of New Orleans into a sound built
+            for the stage.
           </p>
           <p className="mt-4 max-w-2xl font-body text-lg leading-relaxed text-cream/80">
-            During the early days of the pandemic, Zach and his band, The Hounds, brought
-            music to communities by performing 120 live shows from the back of a pickup
-            truck, proving that nothing could silence their drive to connect with people.
-            Today, they continue to electrify audiences nationwide with original songs and
-            dynamic, high-energy shows complete with pyrotechnics and stage presence that
-            leaves fans in awe. Deeply influenced by the indie folk-country scene, Zach
-            channels faith and authenticity into every note, inspiring others to embrace
-            their dreams and keep moving forward, no matter the odds!
+            With trumpets weaving through guitars and songs about growing older, raising
+            hell, losing love, and chasing something bigger, Haywood's music feels both
+            familiar and entirely his own.
+          </p>
+          <p className="mt-4 max-w-2xl font-body text-lg leading-relaxed text-cream/80">
+            In 2026, he joined Zach Bryan onstage at Raymond James Stadium in Tampa for a
+            performance of <span className="text-whiskey">"Heading South"</span> — a
+            defining moment in a journey that's only getting started.
+          </p>
+          <p className="mt-4 max-w-2xl font-body text-lg leading-relaxed text-cream/80">
+            With new music and bigger stages ahead, Zach Haywood is making songs meant to
+            be lived — and heard loud.
           </p>
         </div>
       </div>
