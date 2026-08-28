@@ -1,4 +1,4 @@
-# Zach Haywood — Country Music
+# Zach Haywood — Southern Roots
 
 Modern one-page artist site: hero, about, discography, tour/merch placeholders, and social links.
 

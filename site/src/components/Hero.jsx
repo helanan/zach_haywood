@@ -14,7 +14,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-20 pt-40">
         <p className="mb-3 font-cond text-lg uppercase tracking-[0.35em] text-whiskey">
-          Country Music
+          Southern Roots
         </p>
         <h1 className="font-display text-6xl leading-[0.9] text-cream sm:text-8xl md:text-[9rem]">
           ZACH
@@ -22,8 +22,8 @@ export default function Hero() {
           HAYWOOD
         </h1>
         <p className="mt-6 max-w-xl font-body text-lg text-cream/80">
-          Bottom-shelf whiskey, back roads, and middle-of-nowhere towns —
-          real songs for people who've lived them.
+          Coastal town meets old New Orleans, brass in the streets, salt in the air, and
+          honest songs made for late nights, open water, and whatever comes next.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <a
